@@ -7,6 +7,8 @@ box-sizing: border-box;
 :root{ 
     --rojo:#E20000;
     --violeta:#370A6D;
+    --gris:#7B7570;
+    --grisclaro:#EDEDED;
 
 }
 body{
@@ -174,22 +176,33 @@ background: linear-gradient(45deg, rgba(130,2,2,1) 0%, rgba(233,0,0,1) 100%);
     display:inline-block; */
 
     .experiencia{
-        flex-wrap: wrap;
         display: flex;
         flex-direction: row;
         background-color: #EDEDED;
         /* width: 100px;
         height: 100px;/* quiero agrandar el contenedor de idiomas y hobbies*/
-        padding:30px;
+        padding:5vh 7vw;
+        gap: 20px;
+        /* flex-wrap: wrap; */
+        justify-content: center;
     }
     .experiencia-card{
-    
-        width: 600px;
+        background-color: white;
+        width: 500px;
         display: flex;  
-       /*  border: 70px black;  quiero agregarle un borde a la card */
-
+        border-radius: 20px;
+        border: 70px black; 
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.356);
+    }
+    ul{
+        list-style-type: none;
     
-       
+    }
+    .exp-texto{
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
     .experiencia-icon-conteiner{
         display: flex;
@@ -211,6 +224,7 @@ background: linear-gradient(45deg, rgba(130,2,2,1) 0%, rgba(233,0,0,1) 100%);
     .experiencia-icon-conteiner i{
         display:inline-block;
         line-height: 0px;
+        
     }
 
     .hobbies-icon-conteiner{
@@ -222,4 +236,137 @@ background: linear-gradient(45deg, rgba(130,2,2,1) 0%, rgba(233,0,0,1) 100%);
         color: white;
         padding: 40px;
         border-radius: 20px;
+    }
+    .experiencia-laboral-card{
+        width: 600px;
+        display: flex; 
+    }
+    .bi-briefcase-fill{
+        font-size: 5rem ;
+        color: var(--violeta);
+    }
+    .titulo-exp{
+        font-size: 1.7rem;
+        letter-spacing: -1px;
+        color: var(--violeta);
+        font-weight:600;
+    }
+    .titulo-exp{
+    display: flex;
+    margin-bottom: 40px;
+    margin-left: 40px;
+    align-items: center;
+    gap: 40px;
+    }
+    .contenedor-exp{
+       display: flex;
+       justify-content: center;
+       gap:20px;    
+    }
+    .seccion-exp{
+        background-color: white;
+        padding: 5vh 7vw;
+    }
+    .experiencia-laboral-card{
+        padding: 20px;
+        box-shadow:0 0 20px rgba(0, 0, 0, 0.356);
+        border: radius 20px; 
+        width: 500px;
+        gap: 20px;
+        border-radius: 20px;
+        background-color: white;
+
+    }
+    .exp-lab-icon{
+
+    }
+    .logo-icon{
+        background-color: black;
+        height: 70px;
+        width: 70px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-weight:600;
+        font-size: 20px ;
+    }
+    .titulo-gris{
+        color: var(--gris);
+        font-weight: 800;
+    }
+    .titulo-violeta{
+
+        color: var(--violeta);
+        font-weight: 800;
+    }
+    .lista-exp{
+        margin-left: 30px;
+        list-style-type: disc;
+    }
+    .btn-empresa{
+        padding: 10px 25px;
+        border-radius: 20px;
+        border: none;
+        background-color: var(--violeta);
+        color: white;
+        font-weight: 600;
+    }
+    .cont-btn-emp{
+        display: flex;
+        justify-content: end;
+    }
+    .contenido-exp{
+        width: 100%;
+    }
+    .tit-fecha{
+        color: var(--gris);
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-weight: 500;
+    }
+    .seccion-estudios{
+        background-color: var(--grisclaro);
+
+    }
+    .titulo-estudios{
+        color: var(--rojo);
+    }
+    .icono-estudios{
+        font-size: 5rem;
+    }
+    .titulo-rojo{
+        color: var(--rojo);
+    }
+    .btn-estudios{
+        background-color: var(--rojo);
+    }
+    .logo-estudios{
+        background-color: var(--rojo);
+    }
+    footer{
+        background-color: var(--grisclaro);
+        padding: 5vh 7vw;
+    }
+    .redes-footer{
+        color: var(--rojo);
+        font-size: 3rem;
+    }
+
+    .bi-whatsapp{
+      
+    }
+    .whatsapp{
+        font-size: 2rem;
+        color: white;
+        padding: 20px;
+        background-color: var(--violeta);   
+        position: fixed;
+        bottom: 0;
+        right: 9vw;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+        
     }
