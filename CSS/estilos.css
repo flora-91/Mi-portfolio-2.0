@@ -4,6 +4,24 @@ margin: 0;
 padding: 0;
 box-sizing: border-box; 
 }
+@keyframes entrada-izquierda{
+    0%{ 
+       transform: translateX(600px);
+    }
+
+    100%{
+        transform: translateX(0px);
+    }
+}
+@keyframes entrada-derecha {
+    0%{
+        transform: translateX(-600px) ;
+    }
+    100%{
+        transform: translateX(0px);
+    }
+
+}
 
 :root{ 
     --rojo:#E20000;
@@ -11,6 +29,9 @@ box-sizing: border-box;
     --gris:#7B7570;
     --grisclaro:#EDEDED;
 
+}
+html{
+    scroll-behavior: smooth;
 }
 .hamburguesa{
     display: none;
@@ -22,7 +43,7 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
    /*  background-attachment: fixed;    */
-    height: 400vh;
+    min-height: 100vh;
 
 }
 
@@ -33,14 +54,19 @@ header{
     align-items: center;
 }
 a{
-    color: black;
     text-decoration: none;
-   
+    color: black;
+
 }
 nav{
     display: flex;
     align-items: center;
     gap: 3vw;
+}
+.main{
+    padding: 7vh 7vw;
+    min-width: 50%;
+    
 }
 .btn-cv{
 
@@ -73,7 +99,8 @@ font-weight: 600;
     width: 300px;
     border-radius: 220px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.479);
-
+    animation-name: entrada-izquierda;
+    animation-duration: 2s;
 
 }
 .redes{
@@ -100,12 +127,20 @@ font-weight: 600;
 
 .info-hero{
     width: 50%;
+    animation-name: entrada-derecha;
+    animation-duration: 2s;
 
+}
+.mt{
+    margin-top: 8vh;
 }
 .mb{
     margin-bottom: 5vh;
 }
-.info-hero h1{
+.mb-2{
+    margin-bottom: 8vh;
+}
+h1{
 
     font-size: 2.3rem;
     font-weight: 800;
@@ -132,13 +167,20 @@ background: linear-gradient(45deg, rgba(130,2,2,1) 0%, rgba(233,0,0,1) 100%);
     padding: 8px 10px 30px;
     flex-direction: column;
     color: black;
-    background-color: white;
+    background-color: rgb(235, 231, 231);
     width: 150px;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-   
+    /* opacity: 0.85; */
+
+}
+.card-tecnologia:hover{
+    
+    background-color: white;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.336);
+
 }
 .contenedor-tecnologias{
     
@@ -148,7 +190,6 @@ background: linear-gradient(45deg, rgba(130,2,2,1) 0%, rgba(233,0,0,1) 100%);
     flex-wrap: wrap;
     align-items:center ;
     gap: 1rem;
-   
 
 }
 /* .experiencia{
@@ -163,7 +204,6 @@ background: linear-gradient(45deg, rgba(130,2,2,1) 0%, rgba(233,0,0,1) 100%);
     flex-direction: row;
     width: 600px;
 
-   
 }
 .experiencia-icon-conteiner{
     display: flex;
@@ -218,7 +258,6 @@ background: linear-gradient(45deg, rgba(130,2,2,1) 0%, rgba(233,0,0,1) 100%);
         color: white;
         padding: 40px;
         border-radius: 20px;
-    
     }
     
     .experiencia-text{
@@ -264,9 +303,9 @@ background: linear-gradient(45deg, rgba(130,2,2,1) 0%, rgba(233,0,0,1) 100%);
     gap: 40px;
     }
     .contenedor-exp{
-       display: flex;
-       justify-content: center;
-       gap:20px;    
+    display: flex;
+    justify-content: center;
+    gap:20px;    
     }
     .seccion-exp{
         background-color: white;
@@ -293,7 +332,6 @@ background: linear-gradient(45deg, rgba(130,2,2,1) 0%, rgba(233,0,0,1) 100%);
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 50%;
         font-weight:600;
         font-size: 20px ;
     }
@@ -317,10 +355,19 @@ background: linear-gradient(45deg, rgba(130,2,2,1) 0%, rgba(233,0,0,1) 100%);
         background-color: var(--violeta);
         color: white;
         font-weight: 600;
+       
+    }
+    .btn-empresa:hover{
+        transition: all .25s ease-in ;
+        background-color: var(--gris);
+        color: black;  
     }
     .cont-btn-emp{
         display: flex;
         justify-content: end;
+        color: white;
+        cursor: pointer;
+        
     }
     .contenido-exp{
         width: 100%;
@@ -360,22 +407,150 @@ background: linear-gradient(45deg, rgba(130,2,2,1) 0%, rgba(233,0,0,1) 100%);
     }
 
     .bi-whatsapp{
-      
+    color: white;
     }
+
     .whatsapp{
         font-size: 2rem;
-        color: white;
-        padding: 20px;
+        color: white !important;
+        padding: 15px;
         background-color: var(--violeta);   
         position: fixed;
         bottom: 0;
-        right: 9vw;
+        right: 15vw;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
+        cursor: pointer;
+    }
+    .whatsapp a{}
 
+    .flechita{
+        font-size: 2rem;
+        position: fixed;
+        bottom:0;
+        background-color: var(--violeta);
+        color: white;
+        padding: 15px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        right:3vw;
+        -webkit-text-stroke: white 0.5px;
+
+    }
+    .inicio{
+        background-image: url("../img/inicio.png");
+        background-size: cover;
+        background-position: center; 
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+       /*  background-attachment: fixed;    */
+       /*  height: 500vh; */
+        }
+    
+        .contacto{
+        background-image: url("../img/fondo-contacto.png");
+        background-size: cover; 
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+       /*  background-attachment: fixed;    */
+      /*   height: 500vh; */
+        }
+        .pointer{
+            cursor: pointer;
+        }
+
+   
+
+    
+    .hamburguesa{
+        border: none;
+        background-color: transparent;
+        font-size: 2.3rem;
+    }
+    .form{
+        padding-top: 6%;
+        margin: auto;
+        min-width: 20rem;
+        text-align: center;
+        display: grid;
+        gap: 0.5rem;
+        width: 500px;
+
+    }
+    .input{
+        padding: 0.5rem;
+        width: 100%;
+        border-radius: 0.5rem;
+        border: none;
+        box-shadow: 0px 0px 15px -4px hsl(0, 0%, 0%, 0.5);
+    }
+    /* .form-btn{
+        background-color: var(--violeta);
+ border-radius: 20px;
+ border: none;
+ color:white;
+ padding: 13px 14px;
+ display: flex;
+gap: 6px;
+font-size: 12px;
+font-weight: 600;
+    } */
+    .tit-contacto{
+       font-size: 1.7rem;
+        letter-spacing: -1px;
+        color: var(--violeta);
+        font-weight:600;
+    }
+    .input-coment{
+        height: 150px;
+        resize: vertical;
+    }
+    .form-control{
+       display: flex;
+       gap: 1rem;
+       justify-content: center;
+    }
+    .form-btn{
+        width: 80px;
+    }
+    .form-btn:hover{
+    background-color: #370A6D;
+    transition: all 1s ease-in;
+    color: white;
+    }
+    .reset-btn{
+
+    }
+    @media screen and (max-width: 750px){ /*No poner codigo debajo*/
+        .hero{
+        flex-direction:column-reverse;  
+        align-items: center; 
         
     }
-    @media screen and (max-width: 420px){
+    .experiencia{
+        flex-direction: column;
+        align-items: center;
+    }
+    .info-hero{
+        width: 100%;
+    }
+    h2{
+        text-align: center;
+    }
+    .contenedor-exp{
+        flex-direction: column;
+        align-items: center;
+    }
+    .experiencia-laboral-card{
+        width: 90vw;
+    }
+    .experiencia-card{
+        width: 90vw;
+    }
+    }
+        
+    
+    @media screen and (max-width: 500px){
         header{
         justify-content: end;
 
@@ -387,23 +562,24 @@ background: linear-gradient(45deg, rgba(130,2,2,1) 0%, rgba(233,0,0,1) 100%);
             display:block;
 
         }
-    }
-    
-    .inicio{
-    background-image: url("../img/inicio.png");
-    background-size: cover;
-    background-position: center; 
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-   /*  background-attachment: fixed;    */
-    height: 500vh;
-    }
+        .hero{
+            gap: 30px;
+        }}
 
-    .contacto{
-        background-image: url("../img/fondo-contacto.png");
-    background-size: cover; 
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-   /*  background-attachment: fixed;    */
-    height: 500vh;
+        @media screen and (max-width: 400px){
+        .input{
+            width: 100%;
+        
+        }
+        .form{
+            min-width: 0;
+        }
+        .flechita{
+            display: none;
+        }
+        .whatsapp{
+            padding: 8px;
+            font-size: 1.5rem;
+            right: 10px;
+        }
     }
