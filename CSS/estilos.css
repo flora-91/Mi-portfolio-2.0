@@ -1384,3 +1384,449 @@ header {
         cursor: pointer;
     }
 }
+/* =========================================================
+   RESPONSIVE FINAL - MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 650px) {
+
+    /* ---------- GENERAL ---------- */
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+
+    /* ---------- HEADER ---------- */
+
+    header {
+        height: 70px;
+        padding: 10px 20px;
+        justify-content: flex-end;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .hamburguesa {
+        display: block;
+        font-size: 2.2rem;
+        color: var(--violeta);
+        border: none;
+        background: transparent;
+        padding: 5px;
+        margin: 0;
+        cursor: pointer;
+    }
+
+    .btn-cv {
+        display: none;
+    }
+
+
+    /* ---------- HOME ---------- */
+
+    .home {
+        min-height: 100svh;
+        height: auto;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        padding: 90px 20px 40px;
+        box-sizing: border-box;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .home-content {
+        position: relative;
+        top: auto;
+        left: auto;
+
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+
+        padding: 28px 24px;
+        margin: 0;
+
+        border-radius: 18px;
+    }
+
+    .home-welcome {
+        font-size: 0.95rem;
+        margin-bottom: 12px;
+    }
+
+    .home-content h1 {
+        font-size: clamp(2.3rem, 10vw, 3.2rem);
+        line-height: 1.05;
+        margin-bottom: 15px;
+    }
+
+    .home-subtitle {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+
+    /* ---------- ABOUT ---------- */
+
+    .hero {
+        width: 100%;
+        padding: 70px 20px;
+        box-sizing: border-box;
+
+        display: block;
+    }
+
+    .contenedor-hero {
+        width: 100%;
+        max-width: 100%;
+
+        padding: 0;
+        margin: 0;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 40px;
+        box-sizing: border-box;
+    }
+
+    .info-hero {
+        width: 100%;
+        max-width: 100%;
+
+        animation: none;
+    }
+
+    .info-hero h1 {
+        font-size: 2.8rem;
+        line-height: 1.05;
+        margin-bottom: 30px;
+    }
+
+    .info-hero p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 25px;
+    }
+
+    .img-hero {
+        width: 100%;
+        max-width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        box-sizing: border-box;
+    }
+
+    .retrato {
+        width: min(75vw, 300px);
+        max-width: 300px;
+        height: auto;
+
+        animation: none;
+    }
+
+    .redes {
+        width: 100%;
+        padding: 0;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .redes-icon {
+        gap: 15px;
+    }
+
+    .redes-icon a {
+        font-size: 35px;
+    }
+
+
+    /* ---------- TECHNICAL SKILLS ---------- */
+
+    .tecnologias {
+        width: 100%;
+        box-sizing: border-box;
+
+        padding: 50px 20px;
+    }
+
+    .tecnologias h2 {
+        font-size: 1.8rem;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .contenedor-tecnologias {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 15px;
+    }
+
+    .card-tecnologia {
+        width: 100%;
+        height: 150px;
+        box-sizing: border-box;
+    }
+
+    .card-info img {
+        width: 55px;
+        height: 55px;
+    }
+
+
+    /* ---------- PROJECTS ---------- */
+
+    .seccion-proyectos {
+        width: 100%;
+        box-sizing: border-box;
+
+        padding: 60px 20px;
+    }
+
+    .titulo-proyectos {
+        font-size: 1.8rem;
+        line-height: 1.2;
+        margin-bottom: 30px;
+    }
+
+    .subtitulo-proyectos {
+        font-size: 1.15rem;
+        line-height: 1.3;
+        margin: 35px 0 20px;
+    }
+
+    .grid-proyectos {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .proyecto-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .proyecto-miniatura {
+        height: 190px;
+    }
+
+    .proyecto-contenido {
+        padding: 20px;
+    }
+
+    .proyecto-contenido h4 {
+        font-size: 1rem;
+        line-height: 1.3;
+    }
+
+    .proyecto-contenido p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+
+    /* ---------- EXPERIENCE ---------- */
+
+    .experiencia {
+        width: 100%;
+        box-sizing: border-box;
+
+        padding-left: 20px;
+        padding-right: 20px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenedor-exp {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .experiencia-laboral-card,
+    .experiencia-card {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+
+    /* ---------- STUDIES ---------- */
+
+    .estudios,
+    .contenedor-estudios {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+
+    /* ---------- CONTACT ---------- */
+
+    .seccion-final {
+        width: 100%;
+        box-sizing: border-box;
+
+        background-size: cover;
+        background-position: center;
+    }
+
+    .seccion-final .seccion-contacto {
+        width: 100%;
+        min-height: auto;
+
+        padding: 60px 20px;
+        box-sizing: border-box;
+    }
+
+    .seccion-final .contacto-contenido {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 30px;
+    }
+
+    .seccion-final .contacto-info {
+        width: 100%;
+        max-width: 100%;
+
+        transform: none;
+
+        display: block;
+        padding: 0;
+    }
+
+    .seccion-final .titulo-contacto {
+        font-size: 1.7rem;
+    }
+
+    .seccion-final .titulo-contacto i {
+        font-size: 2.5rem;
+    }
+
+    .seccion-final .form-contacto {
+        width: 100%;
+        max-width: 100%;
+
+        box-sizing: border-box;
+        padding: 22px;
+    }
+
+    .seccion-final .campo-contacto input,
+    .seccion-final .campo-contacto textarea {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    .seccion-final footer {
+        padding: 40px 20px 60px;
+    }
+
+    .redes-footer {
+        text-align: center;
+    }
+
+
+    /* ---------- FLOATING BUTTONS ---------- */
+
+    .whatsapp {
+        right: 20px;
+        bottom: 15px;
+
+        padding: 12px;
+        font-size: 1.7rem;
+
+        z-index: 2000;
+    }
+
+    .flechita {
+        right: 85px;
+        bottom: 15px;
+
+        padding: 12px;
+        font-size: 1.7rem;
+
+        z-index: 2000;
+    }
+}
+
+
+/* =========================================================
+   MOBILE PEQUEÑO
+   ========================================================= */
+
+@media screen and (max-width: 400px) {
+
+    .home {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .home-content {
+        padding: 25px 20px;
+    }
+
+    .home-content h1 {
+        font-size: 2.25rem;
+    }
+
+    .hero {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .info-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .tecnologias {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .seccion-proyectos {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .seccion-final .seccion-contacto {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+}

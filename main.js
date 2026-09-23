@@ -6,3 +6,16 @@ if (btnMenu && menu) {
         menu.classList.toggle("menu-abierto");
     });
 }
+
+const btnArriba = document.querySelector(".flechita");
+
+if (btnArriba) {
+    btnArriba.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+}
